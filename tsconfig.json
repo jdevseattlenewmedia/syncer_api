@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    // "declaration": true,
+    "experimentalDecorators": true,
+    "target": "es6", //default is es5
+    "module": "commonjs", //CommonJs style module in output
+    // "outDir": "dist", //change the output directory
+    "resolveJsonModule": true, //to import out json database
+    "skipLibCheck": true,
+    "strict": true,
+    "baseUrl": "./", // relative path to current directory
+    "paths": {
+      "@config/*": ["./config/*"],
+      "@controllers/*": ["./controllers/*"],
+      "@databases/*": ["./databases/*"],
+      "@dtos/*": ["./dtos/*"],
+      "@exceptions/*": ["./exceptions/*"],
+      "@interfaces/*": ["./interfaces/*"],
+      "@middlewares/*": ["./middlewares/*"],
+      "@models/*": ["./models/*"],
+      "@routes/*": ["./routes/*"],
+      "@services/*": ["./services/*"],
+      "@utils/*": ["./utils/*"],
+      "@root/*": ["./*"] // added root path mapping
+    },
+    "outDir": "./dist",
+    "allowJs": true,
+    "rootDir": "./"
+  },
+  "lib": ["es2015"],
+  "include": ["./**/*", "./package.json"],
+  // "include": ["./**/*.ts", "./**/*.json", ".env", "./package.json"],
+  // "exclude": ["./node_modules", "./dist"]
+  "exclude": ["node_modules", "./http", "./logs", "./tests"]
+
+  // "include": [
+  //   "./**/*.ts"       //which kind of files to compile
+  //    ],
+  // "exclude": [
+  //   "node_modules"     //which files or directories to ignore
+  // ]
+}
